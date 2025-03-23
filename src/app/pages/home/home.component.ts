@@ -48,32 +48,88 @@ export class HomeComponent implements OnInit {
 
   customers = [
     {
-      text: 'team keeps delivering results, both in time and money! My Vendor Management team uses CloudEagle almost daily for our internal review, and for quarterly board meetings, I use CloudEagle actively to pull out reports.',
-      author: 'Troy Otilio',
-      role: 'CEO',
-      image: '../../../assets/images/Person Image.png',
-      company: '../../../assets/images/Company Logo.png',
+      name: 'Eslam Eltyar',
+      position: '.Net Developer',
+      companyName: '',
+      companyUrl: '',
+      companyImage: '../../../assets/images/star2.png',
+      description:
+        'Very happy to work with you on more than one advanced project, you are a great developer',
+      social: {
+        linkedin: '',
+        whatsapp: '',
+        github: '',
+      },
     },
     {
-      text: 'team keeps delivering results, both in time and money! My Vendor Management team uses CloudEagle almost daily for our internal review, and for quarterly board meetings, I use CloudEagle actively to pull out reports.',
-      author: 'Troy Otilio',
-      role: 'CEO',
-      image: '../../../assets/images/Person Image.png',
-      company: '../../../assets/images/Company Logo.png',
+      name: 'Omar magelislam',
+      position: 'Frontend Developer',
+      companyName: '',
+      companyUrl: '',
+      companyImage: '../../../assets/images/star2.png',
+      description:
+        'A hardworking and diligent developer who has a lot of knowledge and helps others and shares his ideas.',
+      social: {
+        linkedin: '',
+        whatsapp: '',
+        github: '',
+      },
     },
     {
-      text: 'team keeps delivering results, both in time and money! My Vendor Management team uses CloudEagle almost daily for our internal review, and for quarterly board meetings, I use CloudEagle actively to pull out reports.',
-      author: 'Troy Otilio',
-      role: 'CEO',
-      image: '../../../assets/images/Person Image.png',
-      company: '../../../assets/images/Company Logo.png',
+      name: 'nour elgouhary',
+      position: 'devops enginner',
+      companyName: '',
+      companyUrl: '',
+      companyImage: '../../../assets/images/star2.png',
+      description:
+        'Hardworking and understands clean code and how to apply it in his own code to get the best performance.',
+      social: {
+        linkedin: '',
+        whatsapp: '',
+        github: '',
+      },
     },
     {
-      text: 'team keeps delivering results, both in time and money! My Vendor Management team uses CloudEagle almost daily for our internal review, and for quarterly board meetings, I use CloudEagle actively to pull out reports.',
-      author: 'Troy Otilio',
-      role: 'CEO',
-      image: '../../../assets/images/Person Image.png',
-      company: '../../../assets/images/Company Logo.png',
+      name: 'Alla Ezzat',
+      position: 'sr. Angular developer',
+      companyName: '',
+      companyUrl: '',
+      companyImage: '../../../assets/images/star2.png',
+      description:
+        'Hardworking and understands clean code and how to apply it in his own code to get the best performance.',
+      social: {
+        linkedin: '',
+        whatsapp: '',
+        github: '',
+      },
+    },
+    {
+      name: 'mahmoud elslakh',
+      position: 'ui/ux designer',
+      companyName: '',
+      companyUrl: '',
+      companyImage: '../../../assets/images/star2.png',
+      description:
+        'Its great working with you and seeing you design websites with such professionalism.',
+      social: {
+        linkedin: '',
+        whatsapp: '',
+        github: '',
+      },
+    },
+    {
+      name: 'kareem baticha',
+      position: 'web developer',
+      companyName: '',
+      companyUrl: '',
+      companyImage: '../../../assets/images/star2.png',
+      description:
+        'one of the People who complete work within the specified time and with high efficiency',
+      social: {
+        linkedin: '',
+        whatsapp: '',
+        github: '',
+      },
     },
   ];
 
@@ -125,6 +181,21 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.initializeTypedText();
   }
+
+  // ngAfterViewInit() {
+  //   const cards = document.querySelectorAll('.slide-item');
+  //   let maxHeight = 0;
+
+  //   cards.forEach((card) => {
+  //     const element = card as HTMLElement; // Explicitly cast to HTMLElement
+  //     maxHeight = Math.max(maxHeight, element.offsetHeight);
+  //   });
+
+  //   cards.forEach((card) => {
+  //     const element = card as HTMLElement; // Explicitly cast to HTMLElement
+  //     element.style.height = `${maxHeight}px`;
+  //   });
+  // }
 
   next(): void {
     this.owlCarousel.next();
