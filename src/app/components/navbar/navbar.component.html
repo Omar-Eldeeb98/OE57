@@ -1,0 +1,142 @@
+<div class="head-nav-container mt-1" style="z-index: 999 !important">
+  <!--header-->
+  <div class="header-container">
+    <div class="container">
+      <div
+        class="container container-2 d-flex align-items-center justify-content-between py-2 px-4"
+      >
+        <p class="date-container fw-bold mb-0 p-0">
+          <i class="fa-solid fa-calendar-days mx-2"></i>{{ formattedDate }}
+        </p>
+
+        <p class="email-container fw-bold mb-0 p-0">
+          <i class="fa-solid fa-envelope mx-2"></i
+          >omarmakrameldeeb.98&#46;gmail.com
+        </p>
+
+        <p class="phone-container fw-bold mb-0 p-0">
+          <i class="fa-solid fa-mobile-screen-button mx-2"></i>+201018341760
+        </p>
+
+        <p class="location-container fw-bold mb-0 p-0">
+          <i class="fa-solid fa-location-dot mx-2"></i>Cairo, Egypt
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <hr class="m-0 border-2" style="border-color: #fff" />
+  </div>
+  <!--navbar-->
+  <div class="container">
+    <nav class="navbar navbar-expand-sm shadow-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#"
+          ><img
+            src="../../../assets/images/Icon.png"
+            class="logo-img"
+            style="width: 40px"
+            alt="logo"
+            loading="lazy"
+          />
+          <div class="dev-info-container p-0 m-0">
+            <p
+              class="p-0 m-0 text-uppercase text-white-50 fw-bold mx-2 text-center"
+              style="letter-spacing: 4px; font-size: 13px"
+            >
+              omar eldeeb
+            </p>
+            <hr class="m-0 mx-2 border-2" style="border-color: #f37d16" />
+            <p
+              class="p-0 m-0 text-capitalize mx-2 fw-bold text-center text-white-50"
+              style="letter-spacing: 2px; font-size: 9px"
+            >
+              software Developer
+            </p>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox" class="toggle">
+            <div class="bars" id="bar1"></div>
+            <div class="bars" id="bar2"></div>
+            <div class="bars" id="bar3"></div>
+          </label>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item mx-1 fw-bold text-uppercase">
+              <a class="nav-link" routerLink="/home" routerLinkActive="active"
+                ><i class="fa-solid fa-house mx-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item mx-1 fw-bold text-uppercase">
+              <a class="nav-link"
+                ><i class="fa-solid fa-circle-info mx-2"></i>About</a
+              >
+            </li>
+            <li class="nav-item mx-1 fw-bold text-uppercase">
+              <a class="nav-link"
+                ><i class="fa-solid fa-shapes mx-2"></i>Skills</a
+              >
+            </li>
+            <li class="nav-item mx-1 fw-bold text-uppercase">
+              <a class="nav-link"
+                ><i class="fa-solid fa-diagram-project mx-2"></i>Projects</a
+              >
+            </li>
+            <li class="nav-item mx-1 fw-bold text-uppercase">
+              <a class="nav-link">
+                <i class="fa-solid fa-face-smile mx-2"></i>Contact me</a
+              >
+            </li>
+          </ul>
+          <div
+            class="btns-container d-flex align-items-center justify-content-between g-2 gap-3"
+          >
+            <div class="cv-btn-container">
+              <button
+                data-aos="zoom-in"
+                class="cv-btn"
+                (click)="downloadResume()"
+              >
+                <span class="text-capitalize">download cv</span>
+                <i class="fa-solid fa-file-pdf fa-beat-fade mx-2"></i>
+              </button>
+            </div>
+
+            <div class="social-container">
+              <a href="https://github.com/Omar-Eldeeb98" target="_blank"
+                ><i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/omar-eldeeb-60a130199/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+
+              <a href="https://wa.me/+201018341760" target="_blank"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+
+              <a href="mailto:omarmakrameldeeb.98@gmail.com"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
