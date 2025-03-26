@@ -1,0 +1,99 @@
+.footer .container .row {
+  background-color: #03081d !important;
+}
+div.dev-info {
+  border: 1px solid #f37d16a7;
+}
+.social-container a {
+  text-decoration: none !important;
+  color: #878b93;
+  margin-inline: 8px !important;
+  font-size: 20px !important;
+}
+
+.social-container a i {
+  transition: all 0.3s ease-in-out;
+}
+
+.social-container a:hover i {
+  color: #f37d16a7;
+  transform: scale(1.2);
+}
+
+.social-item {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.442);
+  border-radius: 50%;
+}
+ul li a.link-item {
+  color: #585a5c;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+ul li a.link-item:hover {
+  color: #f37d16a7;
+}
+
+h6.h11 {
+  position: relative;
+  font-size: 14px !important;
+}
+
+h6.h11::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 90px;
+  height: 2px;
+  background-color: #f37d16a7;
+}
+ul li {
+  margin-block: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .left-section,
+  .left1-section,
+  .left2-section,
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-3 {
+    margin-block: 40px;
+  }
+
+  .col-md-6 p,
+  .col-lg-6 p {
+    text-align: center !important;
+  }
+}
+.text-orange {
+  color: #f37d16a7;
+}
+/* CV Button */
+.cv-btn {
+  border: none;
+  background-color: #f86f03;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.cv-btn i {
+  font-size: 20px !important;
+}
+
+.cv-btn:hover {
+  transform: scale(1.1);
+  background-color: #f86f03;
+}

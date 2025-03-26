@@ -11,7 +11,7 @@
 
         <p class="email-container fw-bold mb-0 p-0">
           <i class="fa-solid fa-envelope mx-2"></i
-          >omarmakrameldeeb.98&#46;gmail.com
+          >omarmakrameldeeb.98&#64;gmail.com
         </p>
 
         <p class="phone-container fw-bold mb-0 p-0">
@@ -26,8 +26,9 @@
   </div>
 
   <div class="container">
-    <hr class="m-0 border-2" style="border-color: #fff" />
+    <hr class="m-0 border-2" style="border-color: #f37d16a7" />
   </div>
+
   <!--navbar-->
   <div class="container">
     <nav class="navbar navbar-expand-sm shadow-lg">
@@ -47,7 +48,7 @@
             >
               omar eldeeb
             </p>
-            <hr class="m-0 mx-2 border-2" style="border-color: #f37d16" />
+            <hr class="m-0 mx-2 border-2" style="border-color: #f37d16a7" />
             <p
               class="p-0 m-0 text-capitalize mx-2 fw-bold text-center text-white-50"
               style="letter-spacing: 2px; font-size: 9px"
@@ -78,39 +79,147 @@
           <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
             <li class="nav-item mx-1 fw-bold text-uppercase">
               <a class="nav-link" routerLink="/home" routerLinkActive="active"
-                ><i class="fa-solid fa-house mx-2"></i>Home</a
+                ><i class="fa-solid fa-house mx-1"></i>Home</a
               >
             </li>
             <li class="nav-item mx-1 fw-bold text-uppercase">
-              <a class="nav-link"
-                ><i class="fa-solid fa-circle-info mx-2"></i>About</a
-              >
+              <div class="dropdown p-0 m-0">
+                <a
+                  [ngClass]="{ active: isAboutRoute }"
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="text-decoration: none; background: none"
+                  (click)="isDropdownOpen = !isDropdownOpen"
+                >
+                  <i class="fa-solid fa-circle-info mx-1"></i>about
+                  <i
+                    class="fw-bold fa"
+                    [ngClass]="
+                      isDropdownOpen ? 'fa-chevron-up ' : 'fa-chevron-down'
+                    "
+                  ></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item px-1"
+                      routerLink="/about/aboutme"
+                      routerLinkActive="sub-active"
+                      ><i class="fa-solid fa-user mx-2"></i>About me</a
+                    >
+                  </li>
+                  <hr class="my-1 border-1" style="border-color: #f37d16a7" />
+                  <li>
+                    <a class="dropdown-item px-1" routerLink="/education"
+                      ><i class="fa-solid fa-graduation-cap mx-2"></i
+                      >education</a
+                    >
+                  </li>
+                  <hr class="my-1 border-1" style="border-color: #f37d16a7" />
+                  <li>
+                    <a class="dropdown-item px-1" routerLink="/courses"
+                      ><i class="fa-solid fa-book mx-2"></i>courses</a
+                    >
+                  </li>
+                  <hr class="my-1 border-1" style="border-color: #f37d16a7" />
+                  <li>
+                    <a class="dropdown-item px-1" routerLink="/certifications"
+                      ><i class="fa-solid fa-certificate mx-2"></i
+                      >certifications</a
+                    >
+                  </li>
+                  <hr class="my-1 border-1" style="border-color: #f37d16a7" />
+                  <li>
+                    <a class="dropdown-item px-1" routerLink="/skills"
+                      ><i class="fa-solid fa-code mx-2"></i>skills</a
+                    >
+                  </li>
+                  <hr class="my-1 border-1" style="border-color: #f37d16a7" />
+                  <li>
+                    <a class="dropdown-item px-1" routerLink="/resume"
+                      ><i class="fa-solid fa-file-pdf mx-2"></i>resume</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item mx-1 fw-bold text-uppercase">
               <a class="nav-link"
-                ><i class="fa-solid fa-shapes mx-2"></i>Skills</a
+                ><i class="fa-solid fa-diagram-project mx-1"></i>Projects</a
               >
             </li>
             <li class="nav-item mx-1 fw-bold text-uppercase">
-              <a class="nav-link"
-                ><i class="fa-solid fa-diagram-project mx-2"></i>Projects</a
-              >
+              <div class="dropdown p-0 m-0">
+                <a
+                  class="nav-link dropdown-toggle"
+                  routerLink="/career"
+                  routerLinkActive="active"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style="text-decoration: none; background: none"
+                  (click)="isDropdownOpen1 = !isDropdownOpen1"
+                >
+                  <i class="fa-solid fa-briefcase mx-1"></i>career
+                  <i
+                    class="fw-bold fa"
+                    [ngClass]="
+                      isDropdownOpen1 ? 'fa-chevron-up ' : 'fa-chevron-down'
+                    "
+                  ></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <!-- <li class="">
+                    <div
+                      class="mx-auto d-flex align-items-center justify-content-center p-2 text-white-50 fw-bold mb-2"
+                      style="
+                        width: 25px;
+                        height: 25px;
+                        background-color: #f37d1693;
+                        border-radius: 50%;
+                      "
+                    >
+                      <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+                  </li> -->
+                  <li>
+                    <a
+                      class="dropdown-item px-1"
+                      routerLink="/experience"
+                      routerLinkActive=""
+                      ><i class="fa-solid fa-handshake-simple mx-2"></i
+                      >Experiences
+                    </a>
+                  </li>
+                  <hr class="my-1 border-1" style="border-color: #f37d16a7" />
+                  <li>
+                    <a
+                      class="dropdown-item px-1"
+                      routerLink="/futuregoals"
+                      routerLinkActive=""
+                      ><i class="fa-solid fa-bullseye mx-2"></i>future goals</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </li>
+
             <li class="nav-item mx-1 fw-bold text-uppercase">
               <a class="nav-link">
-                <i class="fa-solid fa-face-smile mx-2"></i>Contact me</a
+                <i class="fa-solid fa-face-smile mx-1"></i>Contact</a
               >
             </li>
           </ul>
+
           <div
             class="btns-container d-flex align-items-center justify-content-between g-2 gap-3"
           >
             <div class="cv-btn-container">
-              <button
-                data-aos="zoom-in"
-                class="cv-btn"
-                (click)="downloadResume()"
-              >
+              <button class="cv-btn" (click)="downloadResume()">
                 <span class="text-capitalize">download cv</span>
                 <i class="fa-solid fa-file-pdf fa-beat-fade mx-2"></i>
               </button>

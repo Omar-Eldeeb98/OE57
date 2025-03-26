@@ -1,4 +1,5 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,24 +10,43 @@ export class NavbarComponent implements OnInit {
   private readonly resumePath = 'assets/pdf/cv.pdf';
   private readonly resumeFileName = 'FrontEnd_Resume_OmarEldeeb.pdf';
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.events.subscribe(() => {
+      this.isAboutRoute = this.aboutRoutes.includes(this.router.url);
+    });
+  }
 
-  /**
-   * Initiates a file download by creating a temporary anchor element and simulating
-   * a click event on it. The anchor element is then removed from the DOM.
-   */
+  isDropdownOpen = false;
+  isDropdownOpen1 = false;
+
+  isAboutRoute = false;
+
+  private aboutRoutes = [
+    '/about/aboutme',
+    '/about/education',
+    '/about/courses',
+    '/about/certifications',
+    '/about/skills',
+    '/about/resume',
+  ];
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.dropdown')) {
+      this.isDropdownOpen = false;
+      this.isDropdownOpen1 = false;
+    }
+  }
+
   downloadResume(): void {
     const anchorElement = this.createAnchorElement();
     this.triggerDownload(anchorElement);
     this.cleanupAnchorElement(anchorElement);
   }
 
-  /**
-   * Creates an anchor element for triggering a file download.
-   * @returns {HTMLAnchorElement} The created anchor element.
-   */
   private createAnchorElement(): HTMLAnchorElement {
     const anchorElement = this.renderer.createElement('a');
     anchorElement.setAttribute('target', '_blank');
@@ -35,21 +55,12 @@ export class NavbarComponent implements OnInit {
     return anchorElement;
   }
 
-  /**
-   * Simulates a click event on the provided anchor element to trigger a file download.
-   * @param anchorElement - The anchor element that will be "clicked" to initiate the download.
-   */
-
   private triggerDownload(anchorElement: HTMLAnchorElement): void {
     anchorElement.dispatchEvent(
       new MouseEvent('click', { bubbles: true, cancelable: true })
     );
   }
 
-  /**
-   * Removes the anchor element that was created for triggering a file download.
-   * @param anchorElement - The anchor element to be removed.
-   */
   private cleanupAnchorElement(anchorElement: HTMLAnchorElement): void {
     this.renderer.removeChild(anchorElement.parentNode, anchorElement);
   }

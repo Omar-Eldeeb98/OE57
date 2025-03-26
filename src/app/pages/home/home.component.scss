@@ -7,15 +7,12 @@
 
 .our-services-section .container .row,
 .our-clients-section .container .row {
-  background-color: #0c1423 !important;
+  background-color: #03081d !important;
+
   border-radius: 12px;
 }
 .hero-section .container .row {
-  background-image: linear-gradient(
-      180deg,
-      rgba(16, 24, 40, 0.8) -169.56%,
-      rgba(16, 24, 40, 0.8) 100%
-    ),
+  background-image: linear-gradient(180deg, #03081de0 -169.56%, #03081de0 100%),
     url(../../../assets/images/xx.jpg);
   background-size: cover;
   background-position: center;
@@ -23,7 +20,7 @@
 }
 
 // .contact-btn {
-//   background-color: #f37d16;
+//   background-color: #f37d16a7;
 //   border: none;
 //   padding: 4px 20px;
 //   border-radius: 50px;
@@ -36,6 +33,33 @@
 // }
 
 @media only screen and (max-width: 768px) {
+  .slider-item {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .right-hero {
+    padding-inline-start: 0 !important;
+  }
+
+  .owl-prev,
+  .owl-next {
+    margin-inline: 3px;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #f37d16a7;
+    font-size: 16px !important;
+    font-weight: bold;
+    border: 1px solid #f37d16a7;
+    transition: all 0.3s ease;
+  }
+
+  .says {
+    font-size: 12px !important;
+  }
+
   .hero-section .container .row {
     text-align: center;
     gap: 20px;
@@ -65,12 +89,23 @@
   .our-paragraph::after {
     width: 0% !important;
   }
+
+  .tools-container p {
+    font-size: 12px !important;
+  }
+
+  .tools-container {
+    background-color: rgba(0, 0, 0, 0.442);
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-radius: 6px !important;
+  }
 }
-/* From Uiverse.io by Nawsome */
-.pl {
-  width: 8em;
-  height: 8em;
-}
+// /* From Uiverse.io by Nawsome */
+// .pl {
+//   width: 8em;
+//   height: 8em;
+// }
 
 .pl circle {
   transform-box: fill-box;
@@ -300,155 +335,89 @@
   }
 }
 
-/* From Uiverse.io by opMorn */
+// /* From Uiverse.io by opMorn */
 button.contact-btn {
   position: relative;
-  border: 1px solid gray;
-  border-radius: 30px;
+  border: none;
   box-shadow: 0 0 0 whitesmoke;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   background-color: transparent;
-
-  padding: 4px 25px;
+  width: 50px;
+  height: 50px;
   color: gray;
+  font-size: 40px !important;
 }
 
-.star-1 {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 25px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #f37d16);
-  z-index: -5;
-  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
-}
+// .star-1 {
+//   position: absolute;
+//   top: 10%;
+//   left: 10%;
+//   width: 25px;
+//   height: auto;
+//   filter: drop-shadow(0 0 0 #f37d16a7);
+//   z-index: -5;
+//   transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+// }
 
-.star-2 {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #f37d16);
-  z-index: -5;
-  transition: all 1scubic-bezier(0, 0.4, 0, 1.01);
-}
+// .star-2 {
+//   position: absolute;
+//   top: 45%;
+//   left: 45%;
+//   width: 15px;
+//   height: auto;
+//   filter: drop-shadow(0 0 0 #f37d16a7);
+//   z-index: -5;
+//   transition: all 1scubic-bezier(0, 0.4, 0, 1.01);
+// }
 
-.star-3 {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #f37d16);
-  z-index: -5;
-  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-}
+// .star-3 {
+//   position: absolute;
+//   top: 40%;
+//   left: 40%;
+//   width: 5px;
+//   height: auto;
+//   filter: drop-shadow(0 0 0 #f37d16a7);
+//   z-index: -5;
+//   transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+// }
 
-.star-4 {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  width: 8px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #f37d16);
-  z-index: -5;
-  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
-}
+// .star-4 {
+//   position: absolute;
+//   top: 20%;
+//   left: 40%;
+//   width: 8px;
+//   height: auto;
+//   filter: drop-shadow(0 0 0 #f37d16a7);
+//   z-index: -5;
+//   transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+// }
 
-.star-5 {
-  position: absolute;
-  top: 25%;
-  left: 45%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #f37d16);
-  z-index: -5;
-  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
-}
+// .star-5 {
+//   position: absolute;
+//   top: 25%;
+//   left: 45%;
+//   width: 15px;
+//   height: auto;
+//   filter: drop-shadow(0 0 0 #f37d16a7);
+//   z-index: -5;
+//   transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+// }
 
-.star-6 {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #f37d16);
-  z-index: -5;
-  transition: all 0.8s ease;
-}
+// .star-6 {
+//   position: absolute;
+//   top: 5%;
+//   left: 50%;
+//   width: 5px;
+//   height: auto;
+//   filter: drop-shadow(0 0 0 #f37d16a7);
+//   z-index: -5;
+//   transition: all 0.8s ease;
+// }
 
 button.contact-btn:hover {
-  background: #f37d16;
-  color: whitesmoke;
-  box-shadow: 0 0 0px #f37d16;
-  padding: 4px 40px;
-}
-
-button.contact-btn:hover .star-1 {
-  position: absolute;
-  top: -80%;
-  left: -30%;
-  width: 25px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #f37d16);
-  z-index: 2;
-}
-
-button.contact-btn:hover .star-2 {
-  position: absolute;
-  top: -0%;
-  left: 10%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #f37d16);
-  z-index: 2;
-}
-
-button.contact-btn:hover .star-3 {
-  position: absolute;
-  top: 55%;
-  left: 25%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #f37d16);
-  z-index: 2;
-}
-
-button.contact-btn:hover .star-4 {
-  position: absolute;
-  top: 30%;
-  left: 80%;
-  width: 8px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #f37d16);
-  z-index: 2;
-}
-
-button.contact-btn:hover .star-5 {
-  position: absolute;
-  top: 25%;
-  left: 115%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #f37d16);
-  z-index: 2;
-}
-
-button.contact-btn:hover .star-6 {
-  position: absolute;
-  top: 5%;
-  left: 60%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0px #f37d16);
-  z-index: 2;
-}
-
-.fil0 {
-  fill: #f37d16;
+  color: #f37d16a7;
+  transform: scale(1.2);
 }
 
 .slider-item {
@@ -459,13 +428,16 @@ button.contact-btn:hover .star-6 {
   background-color: transparent !important;
   border: 1px solid gray;
   color: gray;
-  padding: 16px 13px;
+  padding: 16px 10px;
   border-radius: 18px;
   transition: all 0.3s ease;
 }
 
 .scroll-bottom-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  background-color: #f37d16a7 !important;
+  border: 1px solid transparent !important;
+  color: whitesmoke !important;
 }
 
 .our-paragraph {
@@ -473,7 +445,7 @@ button.contact-btn:hover .star-6 {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 2px solid #f37d1644;
+  border: 2px solid #f37d16a7;
   border-radius: 35px;
   width: fit-content;
   padding-inline: 30px !important;
@@ -485,7 +457,7 @@ button.contact-btn:hover .star-6 {
   display: block;
   width: 25%;
   height: 3px;
-  background-color: #f37d1644; /* Change the color to your desired color */
+  background-color: #f37d16a7; /* Change the color to your desired color */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -517,15 +489,15 @@ button.contact-btn:hover .star-6 {
 }
 
 .card-container:hover {
-  background-color: #f37d16ac !important;
+  background-color: #f37d16a7 !important;
   color: white !important;
   transform: scale(0.85) rotate(10deg);
 }
 
 .img-container {
   border-radius: 8px !important;
-  background-color: #19202d;
-  color: #f37d16;
+  background-color: #1f1e33;
+  color: #f37d16a7;
 }
 
 .tools-container {
@@ -541,17 +513,17 @@ button.contact-btn:hover .star-6 {
   height: 40px;
   border-radius: 50%;
   background-color: transparent;
-  color: #f37d16;
+  color: #f37d16a7;
   font-size: 20px;
   font-weight: bold;
-  border: 1px solid #f37d16;
+  border: 1px solid #f37d16a7;
   transition: all 0.3s ease;
 }
 
 .owl-prev:hover,
 .owl-next:hover {
   transform: scale(1.2);
-  background-color: #f37d16;
+  background-color: #f37d16a7;
   border: none;
   color: whitesmoke;
 }
@@ -569,6 +541,10 @@ button.contact-btn:hover .star-6 {
 }
 
 .social-container a:hover i {
-  color: #f37d16;
+  color: #f37d16a7;
   transform: scale(1.2);
+}
+
+.text-orange {
+  color: #f37d16a7;
 }

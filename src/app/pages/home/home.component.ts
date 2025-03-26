@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 import { CarouselComponent, OwlOptions } from 'ngx-owl-carousel-o';
 import Typed from 'typed.js';
 
@@ -9,6 +10,11 @@ import Typed from 'typed.js';
 })
 export class HomeComponent implements OnInit {
   constructor() {}
+
+  // Set the path to your Lottie JSON file (ensure this file is in your assets folder)
+  options: AnimationOptions = {
+    path: '../../../assets/animation/Animation - 1742866196099.json',
+  };
 
   typedText: Typed | undefined;
   @ViewChild('nextSection') nextSection!: ElementRef;
@@ -68,7 +74,7 @@ export class HomeComponent implements OnInit {
       companyUrl: '',
       companyImage: '../../../assets/images/star2.png',
       description:
-        'A hardworking and diligent developer who has a lot of knowledge and helps others and shares his ideas.',
+        'A hardworking  developer who has a lot of knowledge and helps others and shares his ideas.',
       social: {
         linkedin: '',
         whatsapp: '',
@@ -82,7 +88,7 @@ export class HomeComponent implements OnInit {
       companyUrl: '',
       companyImage: '../../../assets/images/star2.png',
       description:
-        'Hardworking and understands clean code and how to apply it in his own code to get the best performance.',
+        'Hardworking and understands clean code and  apply it in his own code to get the best performance.',
       social: {
         linkedin: '',
         whatsapp: '',
@@ -96,7 +102,7 @@ export class HomeComponent implements OnInit {
       companyUrl: '',
       companyImage: '../../../assets/images/star2.png',
       description:
-        'Hardworking and understands clean code and how to apply it in his own code to get the best performance.',
+        'Hardworking and understands clean code and how to apply it in his own code to get best performance.',
       social: {
         linkedin: '',
         whatsapp: '',

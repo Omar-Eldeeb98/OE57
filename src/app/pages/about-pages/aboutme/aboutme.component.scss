@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rammetto+One&display=swap");
+
+.aboutme-section .main-row {
+  background-color: #03081d !important;
+  border-radius: 12px;
+}
+.our-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #f37d16a7;
+  border-radius: 35px;
+  width: fit-content;
+  padding-inline: 30px !important;
+}
+.our-paragraph::before,
+.our-paragraph::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #f37d16a7; /* Change the color to your desired color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30%;
+}
+
+.our-paragraph::before {
+  left: -70%;
+}
+
+.our-paragraph::after {
+  right: -70%;
+}
+
+.left-section,
+.right-section {
+  background-color: #1f1e3376 !important;
+  border-radius: 8px;
+}
+
+.cv-btn {
+  border: none;
+  background-color: #f86f03;
+  color: whitesmoke;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.cv-btn i {
+  font-size: 20px !important;
+}
+
+.cv-btn:hover {
+  transform: scale(1.1);
+  background-color: #f86f03;
+}
+
+.slider-item .tools-img {
+  // filter: grayscale(100%) !important;
+  transition: all 0.1s ease;
+}
+.slider-item .tools-img:hover {
+  // filter: grayscale(0) !important;
+  transform: scale(1.2) !important;
+}
+
+.slider-item {
+  background-color: rgba(0, 0, 0, 0.408);
+}
+.tools-container {
+  background-color: #03081d;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .tools-container {
+    background-color: #03081d;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-radius: 8px !important;
+  }
+
+  .tools-container p {
+    font-size: 12px !important;
+    padding: 3px !important;
+  }
+  .our-paragraph {
+    font-size: 14px !important;
+  }
+
+  .our-paragraph::before,
+  .our-paragraph::after {
+    width: 0% !important;
+  }
+
+  // .phone-numbers-container,
+  // .other-info-container {
+  //   flex-direction: column !important;
+  //   align-items: start !important;
+  // }
+
+  .items-container {
+    flex-direction: column !important;
+    align-items: start !important;
+    font-size: 20px !important;
+  }
+
+  .moreinfo-hr {
+    display: block !important;
+  }
+
+  .summary span {
+    font-size: 13px !important;
+  }
+}
