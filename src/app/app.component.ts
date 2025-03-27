@@ -1,4 +1,12 @@
-import { AfterViewInit, Component, OnInit, Renderer2 } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import AOS from 'aos';
 @Component({
   selector: 'app-root',
@@ -6,7 +14,24 @@ import AOS from 'aos';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  title = 'myportfolio';
+
   constructor(private renderer: Renderer2) {}
+
+  //^ props
+  @ViewChild('goTop') navElement!: ElementRef;
+  @HostListener('window:scroll') onScroll(): void {
+    if (scrollY > 700) {
+      this.renderer.removeClass(this.navElement.nativeElement, 'd-none');
+    } else {
+      this.renderer.addClass(this.navElement.nativeElement, 'd-none');
+    }
+  }
+
+  scrollTop(): void {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
 
   ngAfterViewInit() {
     const script = this.renderer.createElement('script');
@@ -27,7 +52,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.initializeAOS();
   }
-  title = 'myportfolio';
 
   private initializeAOS(): void {
     AOS.init({

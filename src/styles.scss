@@ -48,6 +48,27 @@ body {
   visibility: visible;
 }
 
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background: #14162b;
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #f86f03;
+  border-radius: 8px;
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f86d03d0;
+}
+
 // Other styles...
 // #03081d  ---> main section bg-color
 // #1f1e33   ---> card body bg-color
@@ -57,3 +78,4 @@ body {
 // ##373d4a
 // #404450
 //  <hr class="my-3 border-2" style="border-color: #f37d16a7" />
+// #F86F03  ---> main color

@@ -18,7 +18,7 @@ nav.navbar {
 
 /* Developer Info Container */
 .dev-info-container {
-  border: 1px solid #f37d167f;
+  border: 1px solid #f86f03;
   margin-inline: 4px !important;
   padding-bottom: 4px !important;
   transition: all 0.3s ease-in-out;
@@ -36,8 +36,8 @@ hr {
 }
 
 .dev-info-container:hover {
-  background-color: #f3711571;
-  border: 1px solid #974905;
+  background-color: #f86f03;
+  border: 1px solid #f86f03;
   color: white !important;
 }
 
@@ -58,13 +58,13 @@ hr {
 }
 
 .nav-item .nav-link:hover {
-  color: #f37d16a7 !important;
+  color: #f86f03 !important;
   transform: scale(1.05);
 }
 
 .nav-item .nav-link.active {
-  color: #f37d16a7 !important;
-  border-bottom: 3px solid #f37d16a7;
+  color: #f86f03 !important;
+  border-bottom: 3px solid #f86f03;
 }
 
 .date-container {
@@ -100,7 +100,6 @@ hr {
   background-color: #f86f03;
 }
 
-/* Toggle Button */
 .toggle {
   position: relative;
   width: 30px;
@@ -110,7 +109,7 @@ hr {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: transform 0.5s;
+  transition-duration: 0.5s;
   cursor: pointer;
 }
 
@@ -121,48 +120,49 @@ hr {
 .bars {
   width: 100%;
   height: 4px;
-  background-color: #f37d16a7;
+  background-color: #f86f03;
   border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.9s;
+  width: 150%;
 }
 
 #bar1,
 #bar3 {
-  width: 50%;
-}
-
-#bar2 {
-  width: 120%;
-  transition: width 0.9s;
+  width: 60%;
 }
 
 #checkbox:checked + .toggle .bars {
   position: absolute;
-  transition: transform 0.5s;
+  transition-duration: 0.5s;
 }
 
 #checkbox:checked + .toggle #bar2 {
   transform: scaleX(0);
+  transition-duration: 0.5s;
 }
 
 #checkbox:checked + .toggle #bar1 {
   width: 100%;
   transform: rotate(45deg);
+  transition-duration: 0.5s;
 }
 
 #checkbox:checked + .toggle #bar3 {
   width: 100%;
   transform: rotate(-45deg);
+  transition-duration: 0.5s;
 }
 
 #checkbox:checked + .toggle {
+  transition-duration: 0.5s;
   transform: rotate(180deg);
 }
-
-/* Navbar Toggler */
 .navbar-toggler {
   border: none;
 }
-
 /* Social Links */
 .social-container a {
   text-decoration: none !important;
@@ -176,7 +176,7 @@ hr {
 }
 
 .social-container a:hover i {
-  color: #f37d16a7;
+  color: #f86f03;
   transform: scale(1.2);
 }
 
@@ -187,7 +187,7 @@ hr {
   }
 
   .nav-item .nav-link.active {
-    color: #f37d16a7 !important;
+    color: #f86f03 !important;
     border-bottom: none;
   }
 
@@ -212,13 +212,13 @@ hr {
 }
 
 .dropdown-menu .dropdown-item:hover {
-  background-color: #f37d16a7 !important;
+  background-color: #f86f03 !important;
   color: whitesmoke;
   border-radius: 6px;
 }
 
 .dropdown-menu .dropdown-item.sub-active {
-  background-color: #f37d16a7 !important;
+  background-color: #f86f03 !important;
   color: whitesmoke;
   border-radius: 6px;
 }
@@ -228,5 +228,5 @@ hr {
 }
 
 .text-orange {
-  color: #f37d16a7;
+  color: #f86f03;
 }

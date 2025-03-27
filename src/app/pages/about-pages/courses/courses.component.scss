@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rammetto+One&display=swap");
+
+.courses-section .main-row {
+  background-color: #03081d !important;
+  border-radius: 12px;
+}
+.our-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #f86f03;
+  border-radius: 35px;
+  width: fit-content;
+  padding-inline: 30px !important;
+}
+.our-paragraph::before,
+.our-paragraph::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #f86f03; /* Change the color to your desired color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30%;
+}
+
+.our-paragraph::before {
+  left: -70%;
+}
+
+.our-paragraph::after {
+  right: -70%;
+}
+.eCard-container {
+  background-color: #1f1e339e !important;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .seprator {
+    font-size: 40px !important;
+  }
+  .our-paragraph {
+    font-size: 14px !important;
+  }
+
+  .our-paragraph::before,
+  .our-paragraph::after {
+    width: 0% !important;
+  }
+
+  .eCard-container .row .col-md-2 .img-container {
+    margin-inline: auto !important;
+  }
+
+  .eCard-container .row .col-md-8 h4 {
+    font-size: 18px !important;
+    font-family: "cairo" !important;
+  }
+  .eCard-container .row .col-md-8 p {
+    font-size: 16px !important;
+    font-family: "cairo" !important;
+  }
+
+  .eCard-container .row .col-md-2 div {
+    margin-inline: auto !important;
+  }
+
+  .eCard-container .row .col-md-2 p {
+    font-size: 14px !important;
+    font-family: "cairo" !important;
+  }
+
+  .eCard-container .row .col-md-12 {
+    padding-inline: 0px !important;
+  }
+
+  .eCard-container .row .col-md-12 p {
+    font-size: 16px !important;
+    margin-block: 12px !important;
+  }
+}
