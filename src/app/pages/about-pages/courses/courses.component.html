@@ -15,845 +15,97 @@
         </p>
       </div>
 
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
+      <div *ngFor="let course of courses; let i = index">
+        <div class="col-md-12 col-lg-12 p-2 mb-3">
+          <div class="eCard-container p-2 pb-3">
+            <!-- <i
+              class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
+              style="transform: rotate(0deg)"
+            ></i> -->
 
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/route.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
+            <div class="row px-3 align-items-center g-4">
+              <div class="col-md-2 col-lg-2">
+                <div
+                  class="img-container p-3 d-flex align-items-center justify-content-center"
                   style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
+                    width: 120px;
+                    height: 60px;
+                    border-radius: 8px;
+                    background-color: #020410;
                   "
                 >
-                  Route Academy (software training)
-                </h4>
+                  <img [src]="course.img" class="w-100" alt="" />
+                </div>
               </div>
-            </div>
 
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  oct 2023
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i>
-                  front-end web development by angular framework.
-                </p>
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-calendar-days me-2"></i> duration :
-                  <span
-                    class="me-1 fw-bolder p-2 rounded-2 py-0 text-white"
-                    style="background-color: #f86e03"
-                    >6</span
+              <div class="col-md-8 col-lg-8">
+                <div class="">
+                  <h4
+                    class="text-white-50 fw-bold text-uppercase p-0 m-0"
+                    style="
+                      font-family: Rammetto One;
+                      letter-spacing: 2px;
+                      font-size: 22px;
+                    "
                   >
-                  months.
-                </p>
+                    {{ course.academy }}
+                  </h4>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
-
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/route.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
+              <div class="col-md-2 col-lg-2">
+                <div
+                  class="rounded-2 p-2"
+                  style="background-color: #f86d03; width: fit-content"
                 >
-                  Route Academy (software training)
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  may 2024
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i>
-                  .net back-end web development.
-                </p>
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-calendar-days me-2"></i> duration :
-                  <span
-                    class="me-1 fw-bolder p-2 rounded-2 py-0 text-white"
-                    style="background-color: #f86e03"
-                    >5</span
+                  <p
+                    class="text-white fw-bold p-0 m-0"
+                    style="
+                      font-family: Rammetto One;
+                      letter-spacing: 2px;
+                      font-size: 17px;
+                    "
                   >
-                  months.
-                </p>
+                    {{ course.date }}
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
+              <hr class="my-3 border-2" style="border-color: #f37d16a7" />
 
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/mahara.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
+              <div class="col-md-12 col-lg-12 mt-0">
+                <div
+                  class="rounded p-2 px-3 mb-2"
+                  style="background-color: #020410ad"
                 >
-                  mahara-tech (iti platform)
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  mar 2025
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i>
-                  typescript : practical understanding of typescript programming
-                  language.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
-
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/sololearn.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
-                >
-                  sololearn (programming platform)
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  mar 2025
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i>
-                  Angular : practical understanding of angular 2+ framework.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
-
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/sololearn.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
-                >
-                  sololearn (programming platform)
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  jan 2021
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i>
-                  java : theorical and practical understanding of java
-                  programming language.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
-
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 text-white-50"
-            style="transform: rotate(45deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/nh.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
-                >
-                  new horizons (computer learning centers)
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  july 2019
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i> java se 8 :
-                  fundamentals of programming.
-                </p>
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-clock me-2"></i> this is an
-                  <span
-                    class="me-1 fw-bolder p-2 rounded-2 py-0 text-white"
-                    style="background-color: #f86e03"
-                    >40</span
+                  <p
+                    class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
+                    style="letter-spacing: 1.5px; font-size: 20px"
                   >
-                  hours course.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
-
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/nh.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
-                >
-                  new horizons (computer learning centers)
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  sep 2019
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i> java se 8 :
-                  object oriented programming.
-                </p>
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-clock me-2"></i> this is an
-                  <span
-                    class="me-1 fw-bolder p-2 rounded-2 py-0 text-white"
-                    style="background-color: #f86e03"
-                    >40</span
+                    <i class="fa-solid fa-certificate me-2"></i>
+                    {{ course.courseName }}
+                  </p>
+                  <p
+                    *ngIf="course.duration !== ''"
+                    class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
+                    style="letter-spacing: 1.5px; font-size: 20px"
                   >
-                  hours course.
-                </p>
+                    <i class="fa-solid fa-clock me-2"></i> duration :
+                    {{ course.duration }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
-
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/nh.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
-                >
-                  new horizons (computer learning centers)
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  sep 2019
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i> fundamentals of
-                  mySQL.
-                </p>
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-clock me-2"></i> this is an
-                  <span
-                    class="me-1 fw-bolder p-2 rounded-2 py-0 text-white"
-                    style="background-color: #f86e03"
-                    >24</span
-                  >
-                  hours course.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p
-        class="seprator text-center fw-bold fs-1 m-0 p-0"
-        style="color: #f86d03"
-      >
-        <i class="fa-solid fa-arrows-to-dot"></i>
-      </p>
-
-      <div class="col-md-12 col-lg-12 p-2 mb-3">
-        <div class="eCard-container p-2 pb-3">
-          <!-- <i
-            class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
-            style="transform: rotate(0deg)"
-          ></i> -->
-
-          <div class="row px-3 align-items-center g-4">
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="img-container p-3 d-flex align-items-center justify-content-center"
-                style="
-                  width: 120px;
-                  height: 60px;
-                  border-radius: 8px;
-                  background-color: #020410;
-                "
-              >
-                <img
-                  src="../../../../assets/images/courses/nh.png"
-                  class="w-100"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="col-md-8 col-lg-8">
-              <div class="">
-                <h4
-                  class="text-white-50 fw-bold text-uppercase p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 22px;
-                  "
-                >
-                  new horizons (computer learning centers).
-                </h4>
-              </div>
-            </div>
-
-            <div class="col-md-2 col-lg-2">
-              <div
-                class="rounded-2 p-2"
-                style="background-color: #f86d03; width: fit-content"
-              >
-                <p
-                  class="text-white fw-bold p-0 m-0"
-                  style="
-                    font-family: Rammetto One;
-                    letter-spacing: 2px;
-                    font-size: 17px;
-                  "
-                >
-                  feb 2020
-                </p>
-              </div>
-            </div>
-
-            <hr class="my-3 border-2" style="border-color: #f37d16a7" />
-
-            <div class="col-md-12 col-lg-12 mt-0">
-              <div
-                class="rounded p-2 px-3 mb-2"
-                style="background-color: #020410ad"
-              >
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-certificate me-2"></i> android
-                  applications development mySQL.
-                </p>
-                <p
-                  class="p-0 m-0 my-2 text-white-50 text-capitalize fw-bold"
-                  style="letter-spacing: 1.5px; font-size: 20px"
-                >
-                  <i class="fa-solid fa-clock me-2"></i> this is an
-                  <span
-                    class="me-1 fw-bolder p-2 rounded-2 py-0 text-white"
-                    style="background-color: #f86e03"
-                    >80</span
-                  >
-                  hours course.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p
+          *ngIf="i < courses.length - 1"
+          class="seprator text-center fw-bold fs-1 m-0 p-0"
+          style="color: #f86d03"
+        >
+          <i class="fa-solid fa-arrows-to-dot"></i>
+        </p>
       </div>
     </div>
   </div>
