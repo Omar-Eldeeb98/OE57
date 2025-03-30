@@ -1,5 +1,5 @@
 .footer .container .row {
-  background-color: #03081d !important;
+  background-color: #03081d;
 }
 div.dev-info {
   border: 1px solid #f86f03;
@@ -70,8 +70,7 @@ ul li {
     margin-block: 40px;
   }
 
-  .col-md-6 p,
-  .col-lg-6 p {
+  .col-md-6 p {
     text-align: center !important;
   }
 }

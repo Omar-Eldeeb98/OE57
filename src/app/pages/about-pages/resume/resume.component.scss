@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rammetto+One&display=swap");
+
+.resume-section .main-row {
+  background-color: #03081d !important;
+  border-radius: 12px;
+}
+.our-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #f86f03;
+  border-radius: 35px;
+  width: fit-content;
+  padding-inline: 30px !important;
+}
+.our-paragraph::before,
+.our-paragraph::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #f86f03; /* Change the color to your desired color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30%;
+}
+
+.our-paragraph::before {
+  left: -70%;
+}
+
+.our-paragraph::after {
+  right: -70%;
+}
+
+.resume-container {
+  background-color: #14162b;
+}
+
+.prev,
+.next,
+.see {
+  margin-inline: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #f86f03;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #f86f03;
+  transition: all 0.3s ease;
+}
+
+.prev:hover,
+.next:hover,
+.see:hover {
+  transform: scale(1.2);
+  background-color: #f86f03;
+  border: none;
+  color: whitesmoke;
+}
+
+.see a {
+  transition: all 0.3s ease;
+}
+
+.see:hover a {
+  color: whitesmoke !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .our-paragraph {
+    font-size: 14px !important;
+  }
+
+  .our-paragraph::before,
+  .our-paragraph::after {
+    width: 0% !important;
+  }
+
+  .prev,
+  .next,
+  .see {
+    margin-inline: 3px;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #f86f03;
+    font-size: 16px !important;
+    font-weight: bold;
+    border: 1px solid #f86f03;
+    transition: all 0.3s ease;
+  }
+}

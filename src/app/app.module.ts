@@ -22,6 +22,7 @@ import { FuturegoalsComponent } from './pages/career-pages/futuregoals/futuregoa
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { SafeurlPipe } from './core/pipes/safeurl.pipe';
 
 // Factory function required by AOT
 export function playerFactory() {
@@ -44,6 +45,7 @@ export function playerFactory() {
     ExperienceComponent,
     FuturegoalsComponent,
     ProjectsComponent,
+    SafeurlPipe,
   ],
   imports: [
     BrowserModule,

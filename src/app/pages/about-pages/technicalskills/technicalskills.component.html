@@ -1,1 +1,70 @@
-<p>technicalskills works!</p>
+<!--skills section-->
+<div class="skills-section mt-4">
+  <div class="container px-3">
+    <div class="row main-row g-2 p-2 pb-3 justify-content-start">
+      <!--title-->
+      <div class="mt-3 mb-4">
+        <p
+          class="our-paragraph fw-bold text-white-50 mx-auto p-2 text-capitalize"
+          style="
+            font-size: 25px;
+            letter-spacing: 2px;
+            font-family: Rammetto One;
+          "
+        >
+          technical skills
+        </p>
+      </div>
+
+      <!--skills cards-->
+      <div class="cr p-3">
+        <div class="skills-container p-3" *ngFor="let skill of skills">
+          <i class="fa-solid fa-paperclip" style="color: #f37d16a7"></i>
+          <h5
+            class="text-white-50 fw-bold text-uppercase text-center mb-3"
+            style="
+              font-family: Rammetto One;
+              letter-spacing: 2px;
+              font-size: 25px;
+            "
+          >
+            {{ skill.title }}
+          </h5>
+
+          <div class="ecard p-2 py-3 rounded-2">
+            <div
+              class="icons-container p-2 d-flex align-items-center justify-content-center gap-3 flex-wrap"
+            >
+              <div
+                *ngFor="let icon of skill.icons"
+                class="icon-container rounded-2 p-1 d-flex align-items-center justify-content-center"
+                style="width: 65px; height: 65px; background-color: #24233aa4"
+              >
+                <img
+                  loading="lazy"
+                  [src]="icon"
+                  alt="..."
+                  style="width: 90%; height: 90%"
+                />
+              </div>
+            </div>
+
+            <hr
+              *ngIf="skill.icons.length > 0"
+              class="my-3 border-2"
+              style="border-color: rgba(245, 245, 245, 0.456)"
+            />
+
+            <div class="badge-container text-center">
+              <span
+                *ngFor="let badge of skill.badges"
+                class="badge text-bg-orange mx-2 p-2 fs-6 text-uppercase m-1"
+                >{{ badge }}</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
