@@ -473,11 +473,11 @@ button.contact-btn:hover {
 }
 
 .slider-item .tools-img {
-  filter: grayscale(100%) !important;
+  // filter: grayscale(100%) !important;
   transition: all 0.1s ease;
 }
 .slider-item .tools-img:hover {
-  filter: grayscale(0) !important;
+  // filter: grayscale(0) !important;
   transform: scale(1.2) !important;
 }
 
