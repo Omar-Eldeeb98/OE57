@@ -57,6 +57,11 @@ ul li {
 }
 
 @media only screen and (max-width: 768px) {
+  .col-md-3 .right-section,
+  .col-md-3 .left2-section {
+    display: none !important;
+  }
+
   .left-section,
   .left1-section,
   .left2-section,
@@ -65,9 +70,15 @@ ul li {
     flex-direction: column;
     align-items: center;
   }
-
-  .col-md-3 {
+  .col-md-3 .left-section,
+  .col-md-3.left-section,
+  .col-md-3.left2-section,
+  .col-md-3.right-section {
     margin-block: 40px;
+  }
+
+  .col-md-3 .left1-section {
+    margin-bottom: 0 !important;
   }
 
   .col-md-6 p {
