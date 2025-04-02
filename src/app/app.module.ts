@@ -22,8 +22,8 @@ import { FuturegoalsComponent } from './pages/career-pages/futuregoals/futuregoa
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { ToastrModule } from 'ngx-toastr';
 import { SafeurlPipe } from './core/pipes/safeurl.pipe';
-
 // Factory function required by AOT
 export function playerFactory() {
   return player;
@@ -57,6 +57,14 @@ export function playerFactory() {
     HttpClientModule,
     CarouselModule,
     LottieModule.forRoot({ player: playerFactory }),
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-right',
+      progressAnimation: 'decreasing',
+      preventDuplicates: true,
+      progressBar: true,
+      closeButton: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

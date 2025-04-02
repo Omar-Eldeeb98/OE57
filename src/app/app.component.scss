@@ -1,7 +1,7 @@
 .fixed-item {
   position: fixed;
-  top: 81%;
-  left: 2.13%;
+  top: 92%;
+  right: 1%;
   border-radius: 50% !important;
   background-color: #f86f03;
   color: whitesmoke;
@@ -24,6 +24,6 @@
 
 @media only screen and (max-width: 768px) {
   .fixed-item {
-    left: 7.5% !important;
+    right: 2% !important;
   }
 }

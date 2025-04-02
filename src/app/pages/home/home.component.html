@@ -184,7 +184,7 @@
           </owl-carousel-o>
         </div>
 
-        <hr class="my-3 border-2" style="border-color: #f86f03" />
+        <hr class="my-3 border-2" style="border-color: #f86d03b0" />
 
         <div class="d-flex align-items-center justify-content-center mt-4">
           <button class="scroll-bottom-btn" (click)="scrollToNextSection()">
@@ -213,7 +213,7 @@
         </p>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center d-flex align-items-center justify-content-center"
@@ -250,7 +250,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
@@ -288,7 +288,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
@@ -325,7 +325,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
@@ -363,7 +363,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
@@ -400,7 +400,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
@@ -437,7 +437,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
@@ -473,7 +473,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1">
+      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
@@ -562,6 +562,7 @@
           <owl-carousel-o #owlCarousel [options]="customOptions1">
             <ng-template carouselSlide *ngFor="let customer of customers">
               <div
+                data-aos="zoom-in"
                 class="slide-item mx-2 rounded p-2 pb-3 shadow"
                 style="background-color: rgba(0, 0, 0, 0.442)"
               >
@@ -622,7 +623,10 @@
                     <i class="fa-solid fa-quote-left mx-1"></i>
                     {{ customer.description | slice : 0 : 150 }}
                   </p>
-                  <hr class="my-2 p-0 border-2" style="border-color: #f86f03" />
+                  <hr
+                    class="my-2 p-0 border-2"
+                    style="border-color: rgba(245, 245, 245, 0.481)"
+                  />
 
                   <div
                     class="social-container d-flex align-items-center justify-content-start"

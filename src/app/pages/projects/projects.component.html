@@ -1,1 +1,757 @@
-<p>projects works!</p>
+<!--projects section-->
+<div class="projects-section mt-4">
+  <div class="container px-3">
+    <div class="row main-row g-2 p-2 pb-3 justify-content-start">
+      <!--title-->
+      <div class="mt-3 mb-0">
+        <p
+          class="our-paragraph fw-bold text-white-50 mx-auto p-2 text-capitalize"
+          style="
+            font-size: 25px;
+            letter-spacing: 2px;
+            font-family: Rammetto One;
+          "
+        >
+          projects
+        </p>
+      </div>
+
+      <!--projects -->
+      <div class="col-md-12 col-lg-12">
+        <!--^======================================  nav & tabs =================================-->
+        <div class="nav-tab p-2 mt-0">
+          <div
+            class="nav nav-tabs my-2 border-0 d-flex align-items-center justify-content-center p-2 gap-2"
+            id="nav-tab"
+            role="tablist"
+          >
+            <button
+              data-aos="zoom-in"
+              (click)="getAllProjects()"
+              style="font-family: Rammetto One; letter-spacing: 1.5px"
+              class="nav-link active"
+              id="nav-all-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-all"
+              type="button"
+              role="tab"
+              aria-controls="nav-all"
+              aria-selected="true"
+            >
+              All <span class="mx-2">{{ allProjects.length }}</span>
+            </button>
+
+            <button
+              data-aos="zoom-in"
+              (click)="getAngularProjects()"
+              style="font-family: Rammetto One; letter-spacing: 1.5px"
+              class="nav-link"
+              id="nav-angular-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-angular"
+              type="button"
+              role="tab"
+              aria-controls="nav-angular"
+              aria-selected="false"
+            >
+              Angular <span class="mx-2">{{ angularProjects.length }}</span>
+            </button>
+
+            <button
+              data-aos="zoom-in"
+              (click)="getVanilaJSProjects()"
+              style="font-family: Rammetto One; letter-spacing: 1.5px"
+              class="nav-link"
+              id="nav-js-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-js"
+              type="button"
+              role="tab"
+              aria-controls="nav-js"
+              aria-selected="false"
+            >
+              Vanilla JS <span class="mx-2">{{ vanilajsProjects.length }}</span>
+            </button>
+
+            <button
+              data-aos="zoom-in"
+              (click)="getHtmlcssProjects()"
+              style="font-family: Rammetto One; letter-spacing: 1.5px"
+              class="nav-link"
+              id="nav-htmlcss-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-htmlcss"
+              type="button"
+              role="tab"
+              aria-controls="nav-htmlcss"
+              aria-selected="false"
+            >
+              html & css <span class="mx-2">{{ htmlCssProjects.length }}</span>
+            </button>
+          </div>
+
+          <div class="tab-content mt-4 p-2" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="nav-all"
+              role="tabpanel"
+              aria-labelledby="nav-all-tab"
+            >
+              <div class="row justify-content-center">
+                <div
+                  data-aos="zoom-in"
+                  class="col-md-4 col-lg-4 my-2 mb-4"
+                  *ngFor="let proj of allProjects"
+                >
+                  <div class="card rounded-3 h-100">
+                    <img
+                      style="height: 200px"
+                      [src]="proj.projectMainPicture"
+                      class="card-img-top rounded-top-3 shadow"
+                      alt="..."
+                    />
+
+                    <div
+                      class="card-body p-2 pt-3 d-flex flex-column justify-content-between"
+                    >
+                      <!--title and description-->
+                      <div
+                        class="title-and-description-container p-2 rounded-2 mb-2"
+                      >
+                        <h5
+                          class="card-title text-center text-white-50 text-uppercase fw-bold my-2"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          {{ proj.projectName }}
+                        </h5>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <p
+                          class="card-text text-white-50 text-capitalize text-center"
+                        >
+                          {{ proj.Description }}
+                        </p>
+                      </div>
+
+                      <!--technologies used-->
+                      <div
+                        class="technologies-used-container text-center p-2 rounded-2 mb-2"
+                      >
+                        <p
+                          class="text-white-50 text-uppercase fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          Frontend Technologies
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <div
+                          class="d-flex align-items-center justify-content-center flex-wrap gap-2"
+                        >
+                          <div
+                            *ngFor="let tech of proj.technologiesUsed"
+                            class="icon-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 50px;
+                              height: 50px;
+                            "
+                          >
+                            <img
+                              loading="lazy"
+                              [src]="tech"
+                              alt="..."
+                              class="tools-img"
+                              style="width: 95%"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--links-->
+                      <div class="links-container p-2 rounded-2 text-center">
+                        <p
+                          class="text-white-50 text-uppercase text-center fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          links
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+
+                        <div
+                          class="d-flex gap-2 align-items-center justify-content-center"
+                        >
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              [href]="proj.githubLink"
+                              target="_blank"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.githubLink)
+                              "
+                              ><i class="fa-brands fa-github"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.liveDemoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.liveDemoLink)
+                              "
+                              ><i class="fa-solid fa-eye"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.projectVideoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.projectVideoLink)
+                              "
+                              ><i class="fa-solid fa-video"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="nav-angular"
+              role="tabpanel"
+              aria-labelledby="nav-angular-tab"
+            >
+              <div class="row justify-content-center">
+                <div
+                  data-aos="zoom-in"
+                  class="col-md-4 col-lg-4 my-2 mb-4"
+                  *ngFor="let proj of angularProjects"
+                >
+                  <div class="card rounded-3 h-100">
+                    <img
+                      style="height: 200px"
+                      [src]="proj.projectMainPicture"
+                      class="card-img-top rounded-top-3 shadow"
+                      alt="..."
+                    />
+
+                    <div
+                      class="card-body p-2 pt-3 d-flex flex-column justify-content-between"
+                    >
+                      <!--title and description-->
+                      <div
+                        class="title-and-description-container p-2 rounded-2 mb-2"
+                      >
+                        <h5
+                          class="card-title text-center text-white-50 text-uppercase fw-bold my-2"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          {{ proj.projectName }}
+                        </h5>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <p class="card-text text-white-50 text-capitalize">
+                          {{ proj.Description }}
+                        </p>
+                      </div>
+
+                      <!--technologies used-->
+                      <div
+                        class="technologies-used-container text-center p-2 rounded-2 mb-2"
+                      >
+                        <p
+                          class="text-white-50 text-uppercase fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          Frontend Technologies
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <div
+                          class="d-flex align-items-center justify-content-center flex-wrap gap-2"
+                        >
+                          <div
+                            *ngFor="let tech of proj.technologiesUsed"
+                            class="icon-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 50px;
+                              height: 50px;
+                            "
+                          >
+                            <img
+                              loading="lazy"
+                              [src]="tech"
+                              alt="..."
+                              class="tools-img"
+                              style="width: 95%"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--links-->
+                      <div class="links-container p-2 rounded-2 text-center">
+                        <p
+                          class="text-white-50 text-uppercase text-center fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          links
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+
+                        <div
+                          class="d-flex gap-2 align-items-center justify-content-center"
+                        >
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              [href]="proj.githubLink"
+                              target="_blank"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.githubLink)
+                              "
+                              ><i class="fa-brands fa-github"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.liveDemoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.liveDemoLink)
+                              "
+                              ><i class="fa-solid fa-eye"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.projectVideoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.projectVideoLink)
+                              "
+                              ><i class="fa-solid fa-video"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="nav-js"
+              role="tabpanel"
+              aria-labelledby="nav-js-tab"
+            >
+              <div class="row justify-content-center">
+                <div
+                  data-aos="zoom-in"
+                  class="col-md-4 col-lg-4 my-2 mb-4"
+                  *ngFor="let proj of vanilajsProjects"
+                >
+                  <div class="card rounded-3 h-100">
+                    <img
+                      style="height: 200px"
+                      [src]="proj.projectMainPicture"
+                      class="card-img-top rounded-top-3 shadow"
+                      alt="..."
+                    />
+
+                    <div
+                      class="card-body p-2 pt-3 d-flex flex-column justify-content-between"
+                    >
+                      <!--title and description-->
+                      <div
+                        class="title-and-description-container p-2 rounded-2 mb-2"
+                      >
+                        <h5
+                          class="card-title text-center text-white-50 text-uppercase fw-bold my-2"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          {{ proj.projectName }}
+                        </h5>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <p class="card-text text-white-50 text-capitalize">
+                          {{ proj.Description }}
+                        </p>
+                      </div>
+
+                      <!--technologies used-->
+                      <div
+                        class="technologies-used-container text-center p-2 rounded-2 mb-2"
+                      >
+                        <p
+                          class="text-white-50 text-uppercase fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          Frontend Technologies
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <div
+                          class="d-flex align-items-center justify-content-center flex-wrap gap-2"
+                        >
+                          <div
+                            *ngFor="let tech of proj.technologiesUsed"
+                            class="icon-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 50px;
+                              height: 50px;
+                            "
+                          >
+                            <img
+                              loading="lazy"
+                              [src]="tech"
+                              alt="..."
+                              class="tools-img"
+                              style="width: 95%"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--links-->
+                      <div class="links-container p-2 rounded-2 text-center">
+                        <p
+                          class="text-white-50 text-uppercase text-center fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          links
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+
+                        <div
+                          class="d-flex gap-2 align-items-center justify-content-center"
+                        >
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              [href]="proj.githubLink"
+                              target="_blank"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.githubLink)
+                              "
+                              ><i class="fa-brands fa-github"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.liveDemoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.liveDemoLink)
+                              "
+                              ><i class="fa-solid fa-eye"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.projectVideoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.projectVideoLink)
+                              "
+                              ><i class="fa-solid fa-video"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="nav-htmlcss"
+              role="tabpanel"
+              aria-labelledby="nav-htmlcss-tab"
+            >
+              <div class="row justify-content-center">
+                <div
+                  data-aos="zoom-in"
+                  class="col-md-4 col-lg-4 my-2 mb-4"
+                  *ngFor="let proj of htmlCssProjects"
+                >
+                  <div class="card rounded-3 h-100">
+                    <img
+                      style="height: 200px"
+                      [src]="proj.projectMainPicture"
+                      class="card-img-top rounded-top-3 shadow"
+                      alt="..."
+                    />
+
+                    <div
+                      class="card-body p-2 pt-3 d-flex flex-column justify-content-between"
+                    >
+                      <!--title and description-->
+                      <div
+                        class="title-and-description-container p-2 rounded-2 mb-2"
+                      >
+                        <h5
+                          class="card-title text-center text-white-50 text-uppercase fw-bold my-2"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          {{ proj.projectName }}
+                        </h5>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <p class="card-text text-white-50 text-capitalize">
+                          {{ proj.Description }}
+                        </p>
+                      </div>
+
+                      <!--technologies used-->
+                      <div
+                        class="technologies-used-container text-center p-2 rounded-2 mb-2"
+                      >
+                        <p
+                          class="text-white-50 text-uppercase fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          Frontend Technologies
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+                        <div
+                          class="d-flex align-items-center justify-content-center flex-wrap gap-2"
+                        >
+                          <div
+                            *ngFor="let tech of proj.technologiesUsed"
+                            class="icon-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 50px;
+                              height: 50px;
+                            "
+                          >
+                            <img
+                              loading="lazy"
+                              [src]="tech"
+                              alt="..."
+                              class="tools-img"
+                              style="width: 95%"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--links-->
+                      <div class="links-container p-2 rounded-2 text-center">
+                        <p
+                          class="text-white-50 text-uppercase text-center fw-bold p-0 m-0"
+                          style="font-family: Rammetto One; letter-spacing: 2px"
+                        >
+                          links
+                        </p>
+
+                        <hr
+                          class="my-2 border-2"
+                          style="border-color: #90929ca4"
+                        />
+
+                        <div
+                          class="d-flex gap-2 align-items-center justify-content-center"
+                        >
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              [href]="proj.githubLink"
+                              target="_blank"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.githubLink)
+                              "
+                              ><i class="fa-brands fa-github"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.liveDemoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.liveDemoLink)
+                              "
+                              ><i class="fa-solid fa-eye"></i
+                            ></a>
+                          </div>
+                          <div
+                            class="link-container d-flex align-items-center justify-content-center p-2"
+                            style="
+                              border-radius: 8px;
+                              overflow: hidden;
+                              width: 45px;
+                              height: 45px;
+                            "
+                          >
+                            <a
+                              target="_blank"
+                              [href]="proj.projectVideoLink"
+                              class=""
+                              (click)="
+                                checkLinkIsEmpty($event, proj.projectVideoLink)
+                              "
+                              ><i class="fa-solid fa-video"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--^========================================= nav & tabs====================================-->
+      </div>
+    </div>
+  </div>
+</div>

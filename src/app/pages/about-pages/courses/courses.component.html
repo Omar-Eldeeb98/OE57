@@ -16,7 +16,7 @@
       </div>
 
       <div *ngFor="let course of courses; let i = index">
-        <div class="col-md-12 col-lg-12 p-2 mb-3">
+        <div class="col-md-12 col-lg-12 p-2 mb-3" data-aos="zoom-in">
           <div class="eCard-container p-2 pb-3">
             <!-- <i
               class="fa-solid fa-thumbtack fw-bold p-0 m-0 fs-5 text-white-50"
@@ -100,6 +100,7 @@
         </div>
 
         <p
+          data-aos="zoom-in"
           *ngIf="i < courses.length - 1"
           class="seprator text-center fw-bold fs-1 m-0 p-0"
           style="color: #f86d03"

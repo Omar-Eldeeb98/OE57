@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rammetto+One&display=swap");
+
+.projects-section .main-row {
+  background-color: #03081d !important;
+  border-radius: 12px;
+}
+.our-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #f86f03;
+  border-radius: 35px;
+  width: fit-content;
+  padding-inline: 30px !important;
+}
+.our-paragraph::before,
+.our-paragraph::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #f86f03; /* Change the color to your desired color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30%;
+}
+
+.our-paragraph::before {
+  left: -70%;
+}
+
+.our-paragraph::after {
+  right: -70%;
+}
+
+.nav-link {
+  color: #90929c !important;
+  background-color: #202538 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  text-transform: uppercase !important;
+}
+.nav-link.active {
+  color: whitesmoke !important;
+  background-color: #f86f03 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  text-transform: uppercase !important;
+}
+
+.card {
+  background-color: #14162b !important;
+}
+.technologies-used-container,
+.title-and-description-container,
+.links-container {
+  background-color: #070a19;
+}
+
+.links-container a {
+  text-decoration: none !important;
+  color: #878b93;
+  margin-inline: 8px !important;
+  font-size: 25px !important;
+  transition: all 0.2s ease !important;
+}
+
+.link-container:hover a {
+  color: #f86f03 !important ;
+  transform: scale(1.15);
+}
+
+.icon-container,
+.link-container {
+  background-color: #14162b;
+}
+
+@media only screen and (max-width: 768px) {
+  .title-and-description-container h5 {
+    font-size: 16px !important;
+  }
+  .title-and-description-container p {
+    font-size: 14px !important;
+  }
+
+  .technologies-used-container p {
+    font-size: 14px !important;
+  }
+
+  .technologies-used-container .icon-container {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .technologies-used-container .icon-container img {
+    width: 95%;
+  }
+
+  .links-container p {
+    font-size: 14px !important;
+  }
+
+  .link-container {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .our-paragraph {
+    font-size: 14px !important;
+  }
+
+  .our-paragraph::before,
+  .our-paragraph::after {
+    width: 0% !important;
+  }
+
+  .nav-link {
+    font-size: 10px;
+  }
+}

@@ -13,7 +13,7 @@ import AOS from 'aos';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'myportfolio';
 
   constructor(private renderer: Renderer2) {}
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
 
   private initializeAOS(): void {
     AOS.init({
-      duration: 1600, // Animation duration in milliseconds
+      duration: 1500, // Animation duration in milliseconds
       once: true, // Trigger animation only once
       offset: 200, // Scroll offset before triggering animation
       easing: 'ease', // Easing type

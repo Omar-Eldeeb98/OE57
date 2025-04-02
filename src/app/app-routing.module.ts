@@ -7,6 +7,7 @@ import { CoursesComponent } from './pages/about-pages/courses/courses.component'
 import { CertificationsComponent } from './pages/about-pages/certifications/certifications.component';
 import { TechnicalskillsComponent } from './pages/about-pages/technicalskills/technicalskills.component';
 import { ResumeComponent } from './pages/about-pages/resume/resume.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'resume', component: ResumeComponent, title: 'Resume' },
     ],
   },
+  { path: 'projects', component: ProjectsComponent, title: 'Projects' },
 ];
 
 @NgModule({
