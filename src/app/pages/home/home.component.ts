@@ -1,6 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AnimationOptions } from 'ngx-lottie';
 import { CarouselComponent, OwlOptions } from 'ngx-owl-carousel-o';
+import { IProject } from 'src/app/core/models/iproject';
+import { EProjectType } from 'src/app/core/models/iproject-type';
+import { ProjectsService } from 'src/app/core/services/projects.service';
 import Typed from 'typed.js';
 
 @Component({
@@ -9,7 +12,12 @@ import Typed from 'typed.js';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private _ProjectsService: ProjectsService) {}
+
+  allProjectsStatistics!: number;
+  angularProjectsStatistics!: number;
+  vanilajsProjectsStatistics!: number;
+  htmlCssProjectsStatistics!: number;
 
   // Set the path to your Lottie JSON file (ensure this file is in your assets folder)
   options: AnimationOptions = {
@@ -208,6 +216,16 @@ export class HomeComponent implements OnInit {
   };
   ngOnInit(): void {
     this.initializeTypedText();
+    this.allProjectsStatistics = this._ProjectsService.getAllProjects().length;
+    this.angularProjectsStatistics = this._ProjectsService.getProjectsByType(
+      EProjectType.Angular
+    ).length;
+    this.vanilajsProjectsStatistics = this._ProjectsService.getProjectsByType(
+      EProjectType.VanilaJS
+    ).length;
+    this.htmlCssProjectsStatistics = this._ProjectsService.getProjectsByType(
+      EProjectType.HtmlCss
+    ).length;
   }
 
   // ngAfterViewInit() {

@@ -172,9 +172,8 @@
             <li class="nav-item mx-1 fw-bold text-uppercase">
               <div class="dropdown p-0 m-0">
                 <a
+                  [ngClass]="{ active: isCareerRoute }"
                   class="nav-link dropdown-toggle"
-                  routerLink="/career"
-                  routerLinkActive="active"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -191,24 +190,11 @@
                 </a>
 
                 <ul class="dropdown-menu">
-                  <!-- <li class="">
-                    <div
-                      class="mx-auto d-flex align-items-center justify-content-center p-2 text-white-50 fw-bold mb-2"
-                      style="
-                        width: 25px;
-                        height: 25px;
-                        background-color: #f37d1693;
-                        border-radius: 50%;
-                      "
-                    >
-                      <i class="fa-solid fa-arrow-down"></i>
-                    </div>
-                  </li> -->
                   <li>
                     <a
                       class="dropdown-item px-1"
-                      routerLink="/experience"
-                      routerLinkActive=""
+                      routerLink="/career/experience"
+                      routerLinkActive="sub-active"
                       ><i class="fa-solid fa-handshake-simple mx-2"></i
                       >Experiences
                     </a>
@@ -217,8 +203,8 @@
                   <li>
                     <a
                       class="dropdown-item px-1"
-                      routerLink="/futuregoals"
-                      routerLinkActive=""
+                      routerLink="/career/futuregoals"
+                      routerLinkActive="sub-active"
                       ><i class="fa-solid fa-location-crosshairs mx-2"></i
                       >future goals</a
                     >

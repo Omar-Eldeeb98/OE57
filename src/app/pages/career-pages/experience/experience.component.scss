@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rammetto+One&display=swap");
+.experience-section .main-row {
+  background-color: #03081d !important;
+  border-radius: 12px;
+}
+.our-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #f86f03;
+  border-radius: 35px;
+  width: fit-content;
+  padding-inline: 30px !important;
+}
+.our-paragraph::before,
+.our-paragraph::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  background-color: #f86f03; /* Change the color to your desired color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30%;
+}
+
+.our-paragraph::before {
+  left: -50%;
+}
+
+.our-paragraph::after {
+  right: -50%;
+}
+
+.exp-container {
+  background-color: #1f1e339e !important;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .seprator {
+    font-size: 40px !important;
+  }
+
+  .our-paragraph {
+    font-size: 14px !important;
+  }
+
+  .our-paragraph::before,
+  .our-paragraph::after {
+    width: 0% !important;
+  }
+  .exp-container .row .col-md-2 div.img-container {
+    margin-inline: auto !important;
+    margin-bottom: 16px !important;
+  }
+
+  .exp-container .row .col-md-7 div.ccc {
+    text-align: center !important;
+  }
+
+  .exp-container .row .col-md-7 div.ccc h5 {
+    font-size: 16px !important;
+  }
+
+  .exp-container .row .col-md-7 div.ccc div {
+    margin-top: 16px !important;
+  }
+
+  .exp-container .row .col-md-7 div.ccc div p {
+    font-size: 12px !important;
+  }
+
+  .exp-container .row .col-md-3 div {
+    margin-inline: auto !important;
+    margin-top: 16px !important;
+  }
+
+  .exp-container .row .col-md-3 div p {
+    font-size: 14px !important;
+  }
+
+  .exp-container .row .col-md-12 div p.pp,
+  .exp-container .row .col-md-12 div span {
+    font-size: 14px !important;
+  }
+
+  .exp-container .row .col-md-12 div hr {
+    display: block !important;
+  }
+  .exp-container .row .col-md-12 div.dd p {
+    font-size: 14px !important;
+  }
+}

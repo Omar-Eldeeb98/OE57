@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rammetto+One&display=swap");
 
-// .hero-section .container .row {
-//   background-color: #0c1423 !important;
-//   border-radius: 12px;
-// }
-
 .our-services-section .container .row,
-.our-clients-section .container .row {
+.our-clients-section .container .row,
+.statistics-section .container .row {
   background-color: #03081d !important;
-
   border-radius: 12px;
 }
 .hero-section .container .row {
@@ -19,18 +14,10 @@
   border-radius: 12px;
 }
 
-// .contact-btn {
-//   background-color: #f86f03;
-//   border: none;
-//   padding: 4px 20px;
-//   border-radius: 50px;
-//   color: whitesmoke;
-//   transition: all 0.3s ease;
-// }
-
-// .contact-btn:hover {
-//   padding: 4px 40px;
-// }
+.s-container {
+  background-color: #02040e !important;
+  border-radius: 8px;
+}
 
 @media only screen and (max-width: 768px) {
   .slider-item {

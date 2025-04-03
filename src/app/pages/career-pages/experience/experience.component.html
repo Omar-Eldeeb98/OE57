@@ -1,1 +1,145 @@
-<p>experience works!</p>
+<!--experience section-->
+<div class="experience-section mt-4">
+  <div class="container px-3">
+    <div class="row main-row g-2 p-2 pb-3">
+      <div class="mt-3 mb-4">
+        <p
+          class="our-paragraph fw-bold text-white-50 mx-auto p-2 text-capitalize"
+          style="
+            font-size: 25px;
+            letter-spacing: 2px;
+            font-family: Rammetto One;
+          "
+        >
+          Professional experiences
+        </p>
+      </div>
+
+      <div *ngFor="let co of companies; let i = index">
+        <div class="col-md-12 col-lg-12 p-2 mb-2" data-aos="zoom-in">
+          <div class="exp-container p-3">
+            <div class="row align-items-center">
+              <div class="col-md-2 col-lg-2">
+                <div
+                  class="img-container p-3 d-flex align-items-center justify-content-center"
+                  style="
+                    width: 120px;
+                    height: 60px;
+                    border-radius: 8px;
+                    background-color: #020410;
+                  "
+                >
+                  <img loading="lazy" [src]="co.image" class="w-100" alt="" />
+                </div>
+              </div>
+
+              <div class="col-md-7 col-lg-7">
+                <div class="ccc">
+                  <h5
+                    class="p-0 m-0 text-uppercase text-white-50 fw-bold"
+                    style="font-family: Rammetto One; letter-spacing: 2px"
+                  >
+                    {{ co.name }}
+                  </h5>
+                  <div class="d-flex align-items-center mt-2 gap-3">
+                    <p
+                      class="p-0 m-0 text-capitalize text-white-50 fw-bold"
+                      style="letter-spacing: 1.5px"
+                    >
+                      <i class="fa-solid fa-location-dot me-1"></i>
+                      {{ co.location }}
+                    </p>
+                    <p
+                      class="p-0 m-0 fw-bold text-capitalize text-white-50"
+                      style="letter-spacing: 1.5px"
+                    >
+                      <i class="fa-solid fa-business-time me-1"></i
+                      >{{ co.workType }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-lg-3">
+                <div
+                  class="rounded-2 p-2"
+                  style="background-color: #f86d03; width: fit-content"
+                >
+                  <p
+                    class="text-white fw-bold p-0 m-0"
+                    style="letter-spacing: 1.5px"
+                  >
+                    {{ co.startFromDate }}
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <hr class="my-3 border-2" style="border-color: #f86d03bd" />
+              </div>
+
+              <div class="col-md-12 col-lg-12">
+                <div class="mt-1">
+                  <p
+                    class="pp p-0 m-0 text-white-50 text-uppercase fw-bold"
+                    style="
+                      letter-spacing: 2px;
+                      font-family: Rammetto One;
+                      font-size: 20px;
+                    "
+                  >
+                    <span
+                      class="p-0 m-0 text-uppercase fw-bold"
+                      style="
+                        letter-spacing: 2px;
+                        font-family: Rammetto One;
+                        color: #f86d03;
+                        font-size: 20px;
+                      "
+                      >position title:</span
+                    >
+                    {{ co.positionTitle }}
+                  </p>
+                </div>
+
+                <div
+                  class="dd mt-3 p-3"
+                  style="background-color: #020410; border-radius: 8px"
+                >
+                  <h5
+                    class="p-0 m-0 text-white-50 text-uppercase fw-bold"
+                    style="letter-spacing: 2px; font-family: Rammetto One"
+                  >
+                    what i do ?
+                  </h5>
+
+                  <div *ngFor="let res of co.responsibleFor; let i = index">
+                    <p
+                      class="p-0 m-0 my-2 ms-2 text-white-50 fw-bold text-capitalize ;"
+                      style="letter-spacing: 1.5px"
+                    >
+                      <i class="fa-solid fa-circle me-2"></i>{{ res }}
+                    </p>
+                    <hr
+                      *ngIf="i < co.responsibleFor.length - 1"
+                      class="d-none my-3 border-2"
+                      style="border-color: #878a95"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p
+          data-aos="zoom-in"
+          *ngIf="i < companies.length - 1"
+          class="seprator text-center fw-bold fs-1 m-0 p-0"
+          style="color: #f86d03"
+        >
+          <i class="fa-solid fa-arrows-to-dot"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

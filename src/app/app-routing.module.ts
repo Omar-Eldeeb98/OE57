@@ -8,6 +8,8 @@ import { CertificationsComponent } from './pages/about-pages/certifications/cert
 import { TechnicalskillsComponent } from './pages/about-pages/technicalskills/technicalskills.component';
 import { ResumeComponent } from './pages/about-pages/resume/resume.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { ExperienceComponent } from './pages/career-pages/experience/experience.component';
+import { FuturegoalsComponent } from './pages/career-pages/futuregoals/futuregoals.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +31,22 @@ const routes: Routes = [
     ],
   },
   { path: 'projects', component: ProjectsComponent, title: 'Projects' },
+  {
+    path: 'career',
+    children: [
+      { path: '', redirectTo: 'experience', pathMatch: 'full' },
+      {
+        path: 'experience',
+        component: ExperienceComponent,
+        title: 'Experience',
+      },
+      {
+        path: 'futuregoals',
+        component: FuturegoalsComponent,
+        title: 'Future Goals',
+      },
+    ],
+  },
 ];
 
 @NgModule({

@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe(() => {
       this.isAboutRoute = this.aboutRoutes.includes(this.router.url);
+      this.isCareerRoute = this.careerRoutes.includes(this.router.url);
     });
   }
 
@@ -22,6 +23,7 @@ export class NavbarComponent implements OnInit {
   isDropdownOpen1 = false;
 
   isAboutRoute = false;
+  isCareerRoute = false;
 
   private aboutRoutes = [
     '/about/aboutme',
@@ -31,6 +33,8 @@ export class NavbarComponent implements OnInit {
     '/about/skills',
     '/about/resume',
   ];
+
+  private careerRoutes = ['/career/experience', '/career/futuregoals'];
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event): void {
