@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rammetto+One&display=swap");
+
+.contact-section .main-row {
+  background-color: #03081d !important;
+  border-radius: 12px;
+}
+.our-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid #f86f03;
+  border-radius: 35px;
+  width: fit-content;
+  padding-inline: 30px !important;
+}
+.our-paragraph::before,
+.our-paragraph::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #f86f03; /* Change the color to your desired color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 30%;
+}
+
+.disabled {
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.5 !important;
+  filter: brightness(0.5);
+  /* Optional: Add a filter to make it look disabled */
+  transition: all 0.3s ease !important;
+  background-color: #070a19 !important;
+  color: whitesmoke !important;
+  border: none !important;
+  padding: 12px !important;
+  border-radius: 16px !important;
+  text-transform: capitalize !important;
+  box-shadow: none !important;
+  font-size: 16px !important;
+}
+
+.our-paragraph::before {
+  left: -70%;
+}
+
+.our-paragraph::after {
+  right: -70%;
+}
+
+.map-container,
+.contact-form-container {
+  background-color: #14162b;
+}
+
+.contact-form-container .form-control,
+.contact-form-container textarea {
+  background-color: #070a19 !important;
+  color: whitesmoke !important;
+  border: none !important;
+  padding: 14px !important;
+  border-radius: 16px !important;
+  text-transform: capitalize !important;
+}
+
+.contact-form-container textarea {
+  resize: none !important;
+}
+
+.contact-form-container button.Msubmit-button {
+  background-color: #f86f03 !important;
+  color: white !important;
+  border: 1px solid #f86f03;
+  border-radius: 16px !important;
+  padding: 12px !important;
+  transition: all 0.3s ease;
+}
+
+.contact-form-container button.Msubmit-button:hover {
+  background-color: #f86f03 !important;
+  color: white !important;
+  border: 1px solid #f86f03 !important;
+  border-radius: 16px !important;
+  padding-inline: 25px !important;
+}
+
+.contact-form-container .form-control::placeholder,
+.contact-form-container textarea::placeholder {
+  color: #8a8b95bb !important;
+  opacity: 1 !important; /* Firefox */
+  padding-inline-start: 6px !important;
+  text-transform: capitalize !important;
+}
+.contact-form-container .form-control:focus::placeholder,
+.contact-form-container textarea:focus::placeholder {
+  color: #8a8b95bb !important;
+  opacity: 1 !important; /* Firefox */
+  padding-inline-start: 6px !important;
+  text-transform: capitalize !important;
+}
+
+.contact-form-container .form-control:focus,
+.contact-form-container textarea:focus {
+  background-color: #070a19 !important;
+  color: whitesmoke !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 14px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .left {
+    display: none !important;
+  }
+
+  .our-paragraph {
+    font-size: 14px !important;
+  }
+
+  .our-paragraph::before,
+  .our-paragraph::after {
+    width: 0% !important;
+  }
+}

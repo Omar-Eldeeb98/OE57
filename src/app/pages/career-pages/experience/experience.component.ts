@@ -38,6 +38,19 @@ export class ExperienceComponent implements OnInit {
           'worked closely with back-end developers to ensure seamless API integration.',
         ],
       },
+      {
+        image: '../../../../assets/images/companies/tc.png',
+        name: 'Tech Command',
+        location: 'cairo, Egypt',
+        workType: 'part time - remote',
+        startFromDate: 'Sep 2020 - Apr 2021',
+        positionTitle: 'frontend web developer.',
+        responsibleFor: [
+          'Collaborate with back-end developers and web designers to improve usability.',
+          'Worked with advanced JavaScript as ECMAScript6(ES6).',
+          'Designed and implemented a UI for the websites with HTML, CSS and Bootstrap, JavaScript, jQuery,',
+        ],
+      },
     ];
   }
   ngOnInit(): void {}

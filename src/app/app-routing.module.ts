@@ -10,10 +10,12 @@ import { ResumeComponent } from './pages/about-pages/resume/resume.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ExperienceComponent } from './pages/career-pages/experience/experience.component';
 import { FuturegoalsComponent } from './pages/career-pages/futuregoals/futuregoals.component';
+import { ContactmeComponent } from './pages/contactme/contactme.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, title: 'Home' },
+  { path: 'contact', component: ContactmeComponent, title: 'Contact Me' },
   {
     path: 'about',
     children: [
@@ -21,6 +23,7 @@ const routes: Routes = [
       { path: 'aboutme', component: AboutmeComponent, title: 'About Me' },
       { path: 'education', component: EducationComponent, title: 'Education' },
       { path: 'courses', component: CoursesComponent, title: 'Courses' },
+
       {
         path: 'certifications',
         component: CertificationsComponent,
