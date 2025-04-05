@@ -81,12 +81,10 @@
     font-size: 12px !important;
   }
 
-  .tools-container {
-    background-color: rgba(0, 0, 0, 0.442);
-    border-top-right-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-    border-radius: 6px !important;
-  }
+  // .tools-container {
+  //   background-color: rgba(0, 0, 0, 0.442);
+  //   border-radius: 6px !important;
+  // }
 }
 // /* From Uiverse.io by Nawsome */
 // .pl {
@@ -336,72 +334,6 @@ button.contact-btn {
   font-size: 40px !important;
 }
 
-// .star-1 {
-//   position: absolute;
-//   top: 10%;
-//   left: 10%;
-//   width: 25px;
-//   height: auto;
-//   filter: drop-shadow(0 0 0 #f86f03);
-//   z-index: -5;
-//   transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
-// }
-
-// .star-2 {
-//   position: absolute;
-//   top: 45%;
-//   left: 45%;
-//   width: 15px;
-//   height: auto;
-//   filter: drop-shadow(0 0 0 #f86f03);
-//   z-index: -5;
-//   transition: all 1scubic-bezier(0, 0.4, 0, 1.01);
-// }
-
-// .star-3 {
-//   position: absolute;
-//   top: 40%;
-//   left: 40%;
-//   width: 5px;
-//   height: auto;
-//   filter: drop-shadow(0 0 0 #f86f03);
-//   z-index: -5;
-//   transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-// }
-
-// .star-4 {
-//   position: absolute;
-//   top: 20%;
-//   left: 40%;
-//   width: 8px;
-//   height: auto;
-//   filter: drop-shadow(0 0 0 #f86f03);
-//   z-index: -5;
-//   transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
-// }
-
-// .star-5 {
-//   position: absolute;
-//   top: 25%;
-//   left: 45%;
-//   width: 15px;
-//   height: auto;
-//   filter: drop-shadow(0 0 0 #f86f03);
-//   z-index: -5;
-//   transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
-// }
-
-// .star-6 {
-//   position: absolute;
-//   top: 5%;
-//   left: 50%;
-//   width: 5px;
-//   height: auto;
-//   filter: drop-shadow(0 0 0 #f86f03);
-//   z-index: -5;
-//   transition: all 0.8s ease;
-// }
-
 button.contact-btn:hover {
   color: #f86f03;
   transform: scale(1.2);
@@ -489,8 +421,8 @@ button.contact-btn:hover {
 
 .tools-container {
   background-color: rgba(0, 0, 0, 0.442);
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
 }
 
 .owl-prev,

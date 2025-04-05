@@ -82,6 +82,60 @@ export class HomeComponent implements OnInit {
     { image: '../../../assets/images/skills/apidog-seeklogo.svg' },
   ];
 
+  services = [
+    {
+      title: 'ui / ux',
+      icon: 'fa-solid fa-shapes',
+      description:
+        'create modern user-friendly websites with seamless UI/UX, ensuring intuitive  navigation, responsive design, and optimized performance for an exceptional user experience.',
+    },
+    {
+      title: 'web design',
+      icon: 'fa-solid fa-laptop-code',
+      description:
+        'design visually appealing, user-friendly websites with seamless navigation, responsive layouts, and intuitive UI/UX to enhance user engagement and experience.',
+    },
+    {
+      title: 'web development',
+      icon: 'fa-solid fa-code',
+      description:
+        'I develop fast, responsive, and user-friendly websites with clean code, seamless UI/UX, and optimized performance to enhance user experience.',
+    },
+    {
+      title: 'responsive design',
+      icon: 'fa-solid fa-laptop',
+      description:
+        'create responsive  websites that adapt seamlessly to all devices like mobile devices,  tablets, and desktops ensuring a smooth user experience with intuitive UI/UX and fast performance.',
+    },
+    {
+      title: 'website redesign',
+      icon: 'fa-solid fa-recycle',
+      description:
+        'revamp websites with modern, responsive designs, improved UI/UX, and optimized performance to enhance user engagement and business growth.',
+    },
+
+    {
+      title: 'web animation',
+      icon: 'fa-solid fa-radiation fa-spin',
+      description:
+        'create smooth website animations that enhance user experience, improve interactivity, and bring your brand to life with dynamic visuals.',
+    },
+
+    {
+      title: 'web optimization',
+      icon: 'fa-solid fa-layer-group',
+      description:
+        'optimize websites for speed, performance, and SEO, ensuring fast loading times, smooth user experience, and better search engine rankings.',
+    },
+
+    {
+      title: 'unit testing',
+      icon: 'fa-solid fa-bug-slash',
+      description:
+        'implement unit testing to ensure code reliability, catch bugs early, and improve software quality, maintainable, and error-free development.',
+    },
+  ];
+
   customers = [
     {
       name: 'Eslam Eltyar',

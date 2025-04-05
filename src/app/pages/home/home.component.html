@@ -2,7 +2,7 @@
 <div class="hero-section mt-3">
   <div class="container px-4">
     <div class="row p-3 align-items-center justify-content-between">
-      <div class="col-md-5 col-lg-5">
+      <div class="col-md-5 col-lg-5" data-aos="zoom-in">
         <div class="">
           <h2
             class="fw-bold text-white-50 text-uppercase"
@@ -21,7 +21,7 @@
           </h1>
         </div>
       </div>
-      <div class="col-md-2 col-lg-2 p-0">
+      <div class="col-md-2 col-lg-2 p-0" data-aos="zoom-in">
         <!-- <div class="p-0 m-0">
           <ng-lottie [options]="options" width="100%" height="100%"></ng-lottie>
         </div> -->
@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <div class="right-hero col-md-5 col-lg-5 ps-4">
+      <div class="right-hero col-md-5 col-lg-5 ps-4" data-aos="zoom-in">
         <div class="">
           <h2
             class="fw-bold text-uppercase text-white-50"
@@ -147,7 +147,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-6 mt-4 mx-auto">
+      <div class="col-md-6 col-lg-6 mt-4 mx-auto" data-aos="zoom-in">
         <div class="py-2 tools-container">
           <p
             style="letter-spacing: 4px; font-family: Rammetto One"
@@ -159,7 +159,7 @@
         </div>
       </div>
 
-      <div class="col-mg-12 col-lg-12 mt-3">
+      <div class="col-mg-12 col-lg-12 mt-3" data-aos="zoom-in">
         <div class="slider-container">
           <owl-carousel-o [options]="customOptions">
             <ng-template carouselSlide *ngFor="let tool of tools">
@@ -213,18 +213,17 @@
         </p>
       </div>
 
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
+      <div
+        class="col-md-3 col-lg-3 mb-1"
+        data-aos="zoom-in"
+        *ngFor="let s of services"
+      >
         <div class="card-container p-2">
           <div
             class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center d-flex align-items-center justify-content-center"
             style="width: 60px; height: 60px; font-size: 28px"
           >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-            <i class="fa-solid fa-shapes"></i>
+            <i [class]="s.icon"></i>
           </div>
 
           <p
@@ -235,277 +234,14 @@
               font-family: Rammetto One;
             "
           >
-            ui / ux
+            {{ s.title }}
           </p>
 
           <p
             class="text-white-50 text-capitalize p-2 rounded"
             style="background-color: #1f1e33; line-height: 28px"
           >
-            <i class="fa-solid fa-circle-dot me-2"></i>create modern,
-            user-friendly websites with seamless UI/UX, ensuring intuitive
-            navigation, responsive design, and optimized performance for an
-            exceptional user experience.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
-        <div class="card-container p-2">
-          <div
-            class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
-            style="width: 60px; height: 60px; font-size: 28px"
-          >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-
-            <i class="fa-solid fa-laptop-code"></i>
-          </div>
-
-          <p
-            class="text-white-50 text-uppercase text-center"
-            style="
-              font-size: 20px;
-              letter-spacing: 2px;
-              font-family: Rammetto One;
-            "
-          >
-            web design
-          </p>
-
-          <p
-            class="text-white-50 text-capitalize p-2 rounded"
-            style="background-color: #1f1e33; line-height: 28px"
-          >
-            <i class="fa-solid fa-circle-dot me-2"></i>design visually
-            appealing, user-friendly websites with seamless navigation,
-            responsive layouts, and intuitive UI/UX to enhance user engagement
-            and experience.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
-        <div class="card-container p-2">
-          <div
-            class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
-            style="width: 60px; height: 60px; font-size: 28px"
-          >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-
-            <i class="fa-solid fa-code"></i>
-          </div>
-
-          <p
-            class="text-white-50 text-uppercase text-center"
-            style="
-              font-size: 20px;
-              letter-spacing: 2px;
-              font-family: Rammetto One;
-            "
-          >
-            web development
-          </p>
-
-          <p
-            class="text-white-50 text-capitalize p-2 rounded"
-            style="background-color: #1f1e33; line-height: 28px"
-          >
-            <i class="fa-solid fa-circle-dot me-2"></i>I develop fast,
-            responsive, and user-friendly websites with clean code, seamless
-            UI/UX, and optimized performance to enhance user experience.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
-        <div class="card-container p-2">
-          <div
-            class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
-            style="width: 60px; height: 60px; font-size: 28px"
-          >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-
-            <i class="fa-solid fa-laptop"></i>
-          </div>
-
-          <p
-            class="text-white-50 text-uppercase text-center"
-            style="
-              font-size: 20px;
-              letter-spacing: 2px;
-              font-family: Rammetto One;
-            "
-          >
-            responsive design
-          </p>
-
-          <p
-            class="text-white-50 text-capitalize p-2 rounded"
-            style="background-color: #1f1e33; line-height: 28px"
-          >
-            <i class="fa-solid fa-circle-dot me-2"></i>create responsive
-            websites that adapt seamlessly to all devices like mobile devices,
-            tablets, and desktops ensuring a smooth user experience with
-            intuitive UI/UX and fast performance.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
-        <div class="card-container p-2">
-          <div
-            class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
-            style="width: 60px; height: 60px; font-size: 28px"
-          >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-
-            <i class="fa-solid fa-recycle"></i>
-          </div>
-
-          <p
-            class="text-white-50 text-uppercase text-center"
-            style="
-              font-size: 20px;
-              letter-spacing: 2px;
-              font-family: Rammetto One;
-            "
-          >
-            website redesign
-          </p>
-
-          <p
-            class="text-white-50 text-capitalize p-2 rounded"
-            style="background-color: #1f1e33; line-height: 28px"
-          >
-            <i class="fa-solid fa-circle-dot me-2"></i>revamp websites with
-            modern, responsive designs, improved UI/UX, and optimized
-            performance to enhance user engagement and business growth.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
-        <div class="card-container p-2">
-          <div
-            class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
-            style="width: 60px; height: 60px; font-size: 28px"
-          >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-
-            <i class="fa-solid fa-radiation fa-spin"></i>
-          </div>
-
-          <p
-            class="text-white-50 text-uppercase text-center"
-            style="
-              font-size: 20px;
-              letter-spacing: 2px;
-              font-family: Rammetto One;
-            "
-          >
-            web animation
-          </p>
-
-          <p
-            class="text-white-50 text-capitalize p-2 rounded"
-            style="background-color: #1f1e33; line-height: 28px"
-          >
-            <i class="fa-solid fa-circle-dot me-2"></i>create smooth website
-            animations that enhance user experience, improve interactivity, and
-            bring your brand to life with dynamic visuals.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
-        <div class="card-container p-2">
-          <div
-            class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
-            style="width: 60px; height: 60px; font-size: 28px"
-          >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-            <i class="fa-solid fa-layer-group"></i>
-          </div>
-
-          <p
-            class="text-white-50 text-uppercase text-center"
-            style="
-              font-size: 20px;
-              letter-spacing: 2px;
-              font-family: Rammetto One;
-            "
-          >
-            web optimization
-          </p>
-
-          <p
-            class="text-white-50 text-capitalize p-2 rounded"
-            style="background-color: #1f1e33; line-height: 28px"
-          >
-            <i class="fa-solid fa-circle-dot me-2"></i>optimize websites for
-            speed, performance, and SEO, ensuring fast loading times, smooth
-            user experience, and better search engine rankings.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-lg-3 mb-1" data-aos="zoom-in">
-        <div class="card-container p-2">
-          <div
-            class="img-container mx-auto mb-2 mt-2 p-2 d-flex align-items-center justify-content-center"
-            style="width: 60px; height: 60px; font-size: 28px"
-          >
-            <!-- <img
-              src="../../../assets/images/layer.png"
-              alt="just a pic"
-              class="w-100"
-            /> -->
-
-            <i class="fa-solid fa-bug-slash"></i>
-          </div>
-
-          <p
-            class="text-white-50 text-uppercase text-center"
-            style="
-              font-size: 20px;
-              letter-spacing: 2px;
-              font-family: Rammetto One;
-            "
-          >
-            unit testing
-          </p>
-
-          <p
-            class="text-white-50 text-capitalize p-2 rounded"
-            style="background-color: #19202d; line-height: 28px"
-          >
-            <i class="fa-solid fa-circle-dot me-2"></i>implement unit testing to
-            ensure code reliability, catch bugs early, and improve software
-            quality, maintainable, and error-free development.
+            <i class="fa-solid fa-circle me-2"></i>{{ s.description }}
           </p>
         </div>
       </div>

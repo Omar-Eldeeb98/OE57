@@ -181,7 +181,7 @@
                 ><i class="fa-solid fa-diagram-project mx-1"></i>Projects</a
               >
             </li>
-            <li class="nav-item mx-1 fw-bold text-uppercase">
+            <!-- <li class="nav-item mx-1 fw-bold text-uppercase">
               <div class="dropdown p-0 m-0">
                 <a
                   [ngClass]="{ active: isCareerRoute }"
@@ -223,6 +223,16 @@
                   </li>
                 </ul>
               </div>
+            </li> -->
+
+            <li class="nav-item mx-1 fw-bold text-uppercase">
+              <a
+                class="nav-link"
+                routerLink="/career/experience"
+                routerLinkActive="active"
+              >
+                <i class="fa-solid fa-briefcase mx-2"></i>Experience</a
+              >
             </li>
 
             <li class="nav-item mx-1 fw-bold text-uppercase">
@@ -237,7 +247,7 @@
           </ul>
 
           <div
-            class="btns-container d-flex align-items-center justify-content-between g-2 gap-3"
+            class="btns-container d-flex align-items-center justify-content-between g-2 gap-2"
           >
             <div class="cv-btn-container">
               <button class="cv-btn" (click)="downloadResume()">
